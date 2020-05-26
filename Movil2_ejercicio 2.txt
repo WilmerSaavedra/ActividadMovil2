@@ -1,0 +1,55 @@
+https://paiza.io/projects/VI5E5tewfYp8j-6iPPIrNg?language=swift
+
+public class MenuOffice{
+    var Menu: String = ""
+    var Precio: Double = 0.0
+    var Cantidad: Double = 0
+    var Delivery: Bool = false
+    
+
+   
+}
+var oMenuOffice=MenuOffice()
+
+    var SubTotal:Double = 0.0
+    var Descuento:Double = 0.0
+    var Total:Double = 0.0
+    var condicion:Bool
+    var isDelivery:Double = 7
+
+oMenuOffice.Menu = "Arroz Con pollo"
+oMenuOffice.Precio = 10
+oMenuOffice.Cantidad = 6
+oMenuOffice.Delivery = false
+condicion = oMenuOffice.Delivery 
+
+SubTotal = oMenuOffice.Precio * oMenuOffice.Cantidad
+
+if(SubTotal > 40){ Descuento = SubTotal * 0.05}
+
+Total = SubTotal - Descuento
+
+if condicion == false{
+
+
+			print("-------Sin Servicio Delivery-----------")
+		
+			print("Total      : \(SubTotal)")
+			print("Descuento  : \(Descuento)")
+			print("-----------------")
+			print("Pago Total : \(Total)")
+			
+} else {
+
+Total += isDelivery
+
+ 	print("-------Con Servicio Delivery-----------")
+		
+			print("Total      : \(SubTotal)")
+			print("Delivery   : \(isDelivery)")
+			print("Descuento  : \(Descuento)")
+		    print("-----------------")
+			print("Pago Total : S/ \(Total)")
+}
+
+

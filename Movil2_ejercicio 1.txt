@@ -1,0 +1,71 @@
+https://paiza.io/projects/YBT3dqBRRzZHhyASDzKbsw
+import Foundation
+
+public class Cliente{
+    var Nombres: String = ""
+    var Apellidos: String = ""
+    var Dni: String = ""
+    var Servicio = ["Internet 60mb","Internet 20mb","Internet Satelital 40mb"]
+}
+var oCliente=Cliente()
+
+var Condicion :String = ""
+var CostoServicio :Double = 0.0
+var CostoInstalacion: Double = 0.0
+var Descuento :Double = 0.0
+var TotalPagar:Double = 0.0
+
+oCliente.Nombres="Wilmer"
+oCliente.Apellidos="Saavedra Castillo"
+oCliente.Dni="74972224"
+Condicion=oCliente.Servicio[2]
+
+switch Condicion {
+case "Internet 60mb":
+
+    CostoServicio = 229
+    CostoInstalacion = 20
+    Descuento = CostoServicio * 0.25
+    TotalPagar = (CostoServicio + CostoInstalacion)-Descuento
+    print("-------Datos del Cliente-----------")
+    print("Cliente  : \(oCliente.Nombres)  \(oCliente.Apellidos)")
+    print("Dni      : \(oCliente.Dni)")
+    print("Servicio : \(Condicion)")
+    print("------Detalle del servicio----------")
+    print("CostoServicio    : S/ \(CostoServicio)")
+    print("CostoInstalacion : S/ \(CostoInstalacion)")
+    print("Descuento        : S/ \(Descuento)")
+    print("TotalPagar       : S/ \(TotalPagar)")
+    
+case "Internet 20mb":
+    CostoServicio = 100
+    CostoInstalacion = 20
+    Descuento = CostoServicio * 0.05
+    TotalPagar = (CostoServicio + CostoInstalacion)-Descuento
+    print("-------Datos del Cliente-----------")
+    print("Cliente  : \(oCliente.Nombres)  \(oCliente.Apellidos)")
+    print("Dni      : \(oCliente.Dni)")
+    print("Servicio : \(Condicion)")
+    print("------Detalle del servicio----------")
+    print("CostoServicio    : S/ \(CostoServicio)")
+    print("CostoInstalacion : S/ \(CostoInstalacion)")
+    print("Descuento        : S/ \(Descuento)")
+    print("TotalPagar       : S/ \(TotalPagar)")
+
+case "Internet Satelital 40mb":
+    CostoServicio = 180
+    CostoInstalacion = 30
+    Descuento = CostoServicio * 0.10
+    TotalPagar = (CostoServicio + CostoInstalacion)-Descuento
+    print("-------Datos del Cliente-----------")
+    print("Cliente  : \(oCliente.Nombres)  \(oCliente.Apellidos)")
+    print("Dni      : \(oCliente.Dni)")
+    print("Servicio : \(Condicion)")
+    print("------Detalle del servicio----------")
+    print("CostoServicio    : S/ \(CostoServicio)")
+    print("CostoInstalacion : S/ \(CostoInstalacion)")
+    print("Descuento        : S/ \(Descuento)")
+    print("TotalPagar       : S/ \(TotalPagar)")
+default:
+    print("Ninguna Condicion establecida!")
+}
